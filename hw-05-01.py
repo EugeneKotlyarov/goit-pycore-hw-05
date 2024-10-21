@@ -8,6 +8,7 @@ def caching_fibonacci():
     cache = {}
 
     def fibonacci(n):
+        nonlocal cache
         if n <= 0:
             return 0
         if n == 1:
@@ -24,7 +25,7 @@ def caching_fibonacci():
 # and calculation time printed in nanoseconds
 def main():
 
-    N_CONST = 6
+    N_CONST = 60
 
     fib = caching_fibonacci()
     start = t.time() * 1000000
